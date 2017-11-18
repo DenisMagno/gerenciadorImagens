@@ -9,7 +9,9 @@
 
 		//Método construtor
 		public function __construct(){
-
+			// Acesso ao gerenciador de banco de dados do CodeIgniter
+			$ci = & get_instance();
+			$this->db = $ci->db;
 		}
 
 		//Gets Sets
@@ -39,7 +41,14 @@
 		}
 
 		public function ObtemImagens(){
-			
+			$sql = "SELECT * FROM imagem";
+			$query = $this->db->query($sql);
+
+			if($query->result() != null){
+				return $query->result_array();
+			}else{
+				return false;
+			}
 		}
 	}
 ?>

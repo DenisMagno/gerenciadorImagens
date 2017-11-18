@@ -12,9 +12,9 @@
 				array('id' => 3, 'titulo' => 'Imagem3', 'descricao' => 'Descrição da imagem3', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg')
 			);
 
-			/*$imagem = new ImagemLib();
+			$imagem = new ImagemLib();
 
-			$listaDeImagens = $imagem->ObtemImagens();*/
+			$listaDeImagens = $imagem->ObtemImagens();
 
 			return $listaDeImagens;
 		}
