@@ -13,7 +13,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form method="POST" action="<?= base_url("")?>">
+					<form name="inclusao" method="POST" action="<?= base_url("imagem/incluirImagem")?>">
 						<div class="md-form">
 							<input type="text" name="titulo" id="inputTitulo" class="form-control" maxlength="30" required>
 							<label for="inputTitulo">Título</label>
@@ -26,7 +26,7 @@
 
 						<div class="form-group text-left">
 							<label for="arquivoInput">Escolher foto a ser inserida</label>
-							<input type="file" name="imagem" class="form-control-file form-control-sm" id="arquivoInput" required>
+							<input type="file" name="endereco" class="form-control-file form-control-sm" id="arquivoInput" required>
 						</div>
 
 						<button type="submit" class="btn btn-primary" name="incluir">Incluir</button>

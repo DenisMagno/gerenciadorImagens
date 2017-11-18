@@ -11,5 +11,47 @@
 			$this->load->view('galeria.php', $dados);
 			$this->load->view('component/footer.php');
 		}
+
+		public function editarImagem(){
+			$this->load->helper('url');
+			$this->load->view('component/head.php');
+			$this->load->model('ImagemModel', 'model');
+
+			$this->model->editarImagem();
+
+			$this->load->view('inclusaoImagem.php');
+
+			$dados = array('imagens' => $this->model->listarImagens());
+			$this->load->view('galeria.php', $dados);
+			$this->load->view('component/footer.php');
+		}
+
+		public function excluirImagem(){
+			$this->load->helper('url');
+			$this->load->view('component/head.php');
+			$this->load->model('ImagemModel', 'model');
+
+			$this->model->excluirImagem();
+
+			$this->load->view('inclusaoImagem.php');
+
+			$dados = array('imagens' => $this->model->listarImagens());
+			$this->load->view('galeria.php', $dados);
+			$this->load->view('component/footer.php');
+		}
+
+		public function incluirImagem(){
+			$this->load->helper('url');
+			$this->load->view('component/head.php');
+			$this->load->model('ImagemModel', 'model');
+
+			$this->model->incluirImagem();
+
+			$this->load->view('inclusaoImagem.php');
+
+			$dados = array('imagens' => $this->model->listarImagens());
+			$this->load->view('galeria.php', $dados);
+			$this->load->view('component/footer.php');
+		}
 	}
 ?>

@@ -14,9 +14,37 @@
 
 			$imagem = new ImagemLib();
 
-			$listaDeImagens = $imagem->ObtemImagens();
+			$listaDeImagens = $imagem->obtemImagens();
 
 			return $listaDeImagens;
+		}
+
+		public function editarImagem(){
+			$imagem = new ImagemLib();
+
+			$imagem->setId($this->input->post('id'));
+			$imagem->setTitulo($this->input->post('titulo'));
+			$imagem->setDescricao($this->input->post('descricao'));
+
+			$imagem->EditaImagem();
+		}
+
+		public function excluirImagem(){
+			$imagem = new ImagemLib();
+
+			$imagem->setId($this->input->post('id'));
+
+			$imagem->excluiImagem();
+		}
+
+		public function incluirImagem(){
+			$imagem = new ImagemLib();
+
+			$imagem->setTitulo($this->input->post('titulo'));
+			$imagem->setDescricao($this->input->post('descricao'));
+			$imagem->setEndereco($this->input->post('endereco'));
+
+			$imagem->incluiImagem();
 		}
 	}
 ?>

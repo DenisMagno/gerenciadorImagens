@@ -37,7 +37,7 @@
 								</button>
 							</div>
 							<div class="modal-body text-right">
-								<form name="edicao" method="POST" action="<?= base_url("")?>" enctype="multipart/form-data">
+								<form name="edicao" method="POST" action="<?= base_url("imagem/editarImagem")?>">
 									<input type="hidden" name="id" value="<?= $imagens[$key]['id'] ?>">
 
 									<div class="md-form">
@@ -71,7 +71,7 @@
 							<div class="modal-body">
 								<h5>Deseja realmente excluir a imagem "<?= $imagens[$key]['titulo'] ?>"?</h5>
 							</div>
-							<form>
+							<form name="exclusao" method="POST" action="<?= base_url("imagem/excluirImagem")?>">
 								<input type="hidden" name="id" value="<?= $imagens[$key]['id'] ?>">
 
 								<button type="submit" class="btn btn-success col-md-3" name="confirmar">Confirmar</button>
