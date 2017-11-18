@@ -17,9 +17,9 @@
 			$this->load->view('component/head.php');
 			$this->load->model('ImagemModel', 'model');
 
-			$this->model->editarImagem();
+			$data['mensagem'] = $this->model->editarImagem();
 
-			$this->load->view('inclusaoImagem.php');
+			$this->load->view('inclusaoImagem.php', $data);
 
 			$dados = array('imagens' => $this->model->listarImagens());
 			$this->load->view('galeria.php', $dados);
@@ -31,9 +31,9 @@
 			$this->load->view('component/head.php');
 			$this->load->model('ImagemModel', 'model');
 
-			$this->model->excluirImagem();
+			$data['mensagem'] = $this->model->excluirImagem();
 
-			$this->load->view('inclusaoImagem.php');
+			$this->load->view('inclusaoImagem.php', $data);
 
 			$dados = array('imagens' => $this->model->listarImagens());
 			$this->load->view('galeria.php', $dados);
@@ -45,9 +45,9 @@
 			$this->load->view('component/head.php');
 			$this->load->model('ImagemModel', 'model');
 
-			$this->model->incluirImagem();
+			$data['mensagem'] = $this->model->incluirImagem();
 
-			$this->load->view('inclusaoImagem.php');
+			$this->load->view('inclusaoImagem.php', $data);
 
 			$dados = array('imagens' => $this->model->listarImagens());
 			$this->load->view('galeria.php', $dados);

@@ -2,6 +2,16 @@
 <div class="container-inclusao col-md-11 mx-auto mt-5 text-right">
 	<button type="button" class="btn btn-elegant" data-toggle="modal" data-target="#modalInclusao"><i class="fa fa-download" aria-hidden="true"></i> Incluir uma nova imagem</button>
 	<h6 class="text-center">Clique nas imagens para aumentar seu tamanho!</h6>
+
+	<?php if (isset($mensagem['erro'])){ ?>
+		<div class="col-md-12 alert alert-danger text-center mt-3" role="alert">
+			<?= $mensagem['erro']?>
+		</div>
+	<?php } if (isset($mensagem['sucesso'])){ ?>
+		<div class="col-md-12 alert alert-success text-center mt-3" role="alert">
+			<?= $mensagem['sucesso'] ?>
+		</div>
+	<?php }  ?>
 	<!-- ModalInclusão -->
 	<div class="modal fade" id="modalInclusao" tabindex="-1" role="dialog" aria-labelledby="modalInclusaoLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">

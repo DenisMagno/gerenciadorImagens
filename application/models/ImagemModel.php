@@ -3,15 +3,6 @@
 
 	class ImagemModel extends CI_Model{
 		public function listarImagens(){
-			$listaDeImagens = array(
-				array('id' => 1, 'titulo' => 'Imagem1', 'descricao' => 'Descrição da imagem1', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg'),
-				array('id' => 2, 'titulo' => 'Imagem2', 'descricao' => 'Descrição da imagem2', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg'),
-				array('id' => 3, 'titulo' => 'Imagem3', 'descricao' => 'Descrição da imagem3', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg'),
-				array('id' => 1, 'titulo' => 'Imagem1', 'descricao' => 'Descrição da imagem1', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg'),
-				array('id' => 2, 'titulo' => 'Imagem2', 'descricao' => 'Descrição da imagem2', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg'),
-				array('id' => 3, 'titulo' => 'Imagem3', 'descricao' => 'Descrição da imagem3', 'endereco' => 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg')
-			);
-
 			$imagem = new ImagemLib();
 
 			$listaDeImagens = $imagem->obtemImagens();
@@ -22,29 +13,59 @@
 		public function editarImagem(){
 			$imagem = new ImagemLib();
 
+			if($this->input->post('id') == null){
+				return array('erro' => "Erro interno no sistema");
+			}
+			if($this->input->post('titulo') == null){
+				return array('erro' => "O título não pode ser vazio");
+			}
+			if($this->input->post('descricao') == null){
+				return array('erro' => "A descrição não pode ser vazia");
+			}
+
 			$imagem->setId($this->input->post('id'));
 			$imagem->setTitulo($this->input->post('titulo'));
 			$imagem->setDescricao($this->input->post('descricao'));
 
 			$imagem->EditaImagem();
+
+			return array('sucesso' => "Imagem editada com sucesso!");
 		}
 
 		public function excluirImagem(){
 			$imagem = new ImagemLib();
 
+			if($this->input->post('id') == null){
+				return array('erro' => "Erro interno no sistema");
+			}
+
 			$imagem->setId($this->input->post('id'));
 
 			$imagem->excluiImagem();
+
+			return array('sucesso' => "Imagem excluída com sucesso!");
 		}
 
 		public function incluirImagem(){
 			$imagem = new ImagemLib();
 
+			if($this->input->post('titulo') == null){
+				return array('erro' => "O título não pode ser vazio");
+			}
+			if($this->input->post('descricao') == null){
+				return array('erro' => "A descrição não pode ser vazia");
+			}
+			if($this->input->post('endereco') == null){
+				return array('erro' => "A imagem não pode ser vazia");
+			}
+
 			$imagem->setTitulo($this->input->post('titulo'));
 			$imagem->setDescricao($this->input->post('descricao'));
-			$imagem->setEndereco($this->input->post('endereco'));
+			$imagem->setEndereco(base_url("assets/imagens_bd/".$this->input->post('endereco')));
 
 			$imagem->incluiImagem();
+
+			return array('sucesso' => "Imagem salva com sucesso!");
 		}
 	}
 ?>
