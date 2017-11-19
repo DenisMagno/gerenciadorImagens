@@ -1,4 +1,10 @@
 /* YOUR CUSTOM STYLES */
 
-.container-galeria{
+.imagem-galeria{
+	width: 100%;
+	height: 300px;
+}
+
+.descricao-galeria{
+	height: 30px;
 }

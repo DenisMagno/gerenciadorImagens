@@ -87,11 +87,11 @@
 			//Configura padrão de envio de arquivos
 			$configuracao = array(
 				'upload_path' => './imagens_bd/',
-				'allowed_types' => 'png',
+				'allowed_types' => 'png|jpg',
 				'file_name' => $dataAtual.'.png',
-				'max-size' => '500',
-				'max-width' => '600',
-				'max-height' => '600'
+				'max-size' => '2097152',
+				'max-width' => '2097152',
+				'max-height' => '2097152'
 			);
 
 			//Carrega biblioteca de upload de arquivos e inicializa a mesma com a configuração definida

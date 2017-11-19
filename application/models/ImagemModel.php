@@ -58,6 +58,12 @@
 			if($_FILES['endereco'] == null){
 				return array('erro' => "A imagem não pode ser vazia");
 			}
+			if($_FILES['endereco']['type'] != 'image/jpg' && $_FILES['endereco']['type'] != 'image/jpeg' && $_FILES['endereco']['type'] != 'image/png'){
+				return array('erro' => "Arquivo inválido. Sistema só aceita imagens 'png' ou 'jpg'");
+			}
+			if($_FILES['endereco']['size'] > 2097152){
+				return array('erro' => "Arquivo muito grande. Tente utilizar uma imagem com menos de 2MB.");
+			}
 
 			$imagem->setTitulo($this->input->post('titulo'));
 			$imagem->setDescricao($this->input->post('descricao'));

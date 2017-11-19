@@ -3,10 +3,10 @@
 		<?php if(!empty($imagens)){ foreach($imagens as $key => $value){ ?>
 			<figure class="col-md-4">
 				<a data-toggle="modal" data-target="#modalImagem<?= $key ?>">
-					<img class="img-thumbnail rounded" alt="picture" src="<?= $imagens[$key]['endereco'] ?>">
-					<h5 class="text-center my-3"><?= $imagens[$key]['titulo'] ?></h5>
+					<img class="img-thumbnail rounded imagem-galeria mx-auto d-block" alt="picture" src="<?= $imagens[$key]['endereco'] ?>">
 				</a>
-				<p class="text-justify my3"><?= $imagens[$key]['descricao'] ?></p>
+				<h5 class="titulo-galeria text-center my-3"><?= $imagens[$key]['titulo'] ?></h5>
+				<p class="descricao-galeria text-justify my3"><?= $imagens[$key]['descricao'] ?></p>
 
 				<!-- ModalImagem -->
 				<div class="modal fade" id="modalImagem<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="modalImagem<?= $key ?>Label" aria-hidden="true">
