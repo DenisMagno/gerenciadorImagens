@@ -55,13 +55,13 @@
 			if($this->input->post('descricao') == null){
 				return array('erro' => "A descrição não pode ser vazia");
 			}
-			if($this->input->post('endereco') == null){
+			if($_FILES['endereco'] == null){
 				return array('erro' => "A imagem não pode ser vazia");
 			}
 
 			$imagem->setTitulo($this->input->post('titulo'));
 			$imagem->setDescricao($this->input->post('descricao'));
-			$imagem->setEndereco(base_url("assets/imagens_bd/".$this->input->post('endereco')));
+			$imagem->setEndereco($_FILES['endereco']);
 
 			$imagem->incluiImagem();
 

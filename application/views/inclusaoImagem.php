@@ -23,7 +23,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form name="inclusao" method="POST" action="<?= base_url("imagem/incluirImagem")?>">
+					<form name="inclusao" method="POST" action="<?= base_url("imagem/incluirImagem")?>" enctype="multipart/form-data">
 						<div class="md-form">
 							<input type="text" name="titulo" id="inputTitulo" class="form-control" maxlength="30" required>
 							<label for="inputTitulo">Título</label>
