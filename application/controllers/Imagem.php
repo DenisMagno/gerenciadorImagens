@@ -5,6 +5,9 @@
 			$this->load->view('component/head.php');
 			$this->load->model('ImagemModel', 'model');
 
+			$dados = array('imagens' => $this->model->obterUltimasImagens());
+			$this->load->view('carousel.php', $dados);
+
 			$this->load->view('inclusaoImagem.php');
 
 			$dados = array('imagens' => $this->model->listarImagens());

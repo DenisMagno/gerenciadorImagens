@@ -1,7 +1,5 @@
-<h1 class="text-center h1 mt-3">Gerenciador de Imagens</h1>
 <div class="container-inclusao col-md-11 mx-auto mt-5 text-right">
-	<button type="button" class="btn btn-outline-elegant" data-toggle="modal" data-target="#modalInclusao"><i class="fa fa-download" aria-hidden="true"></i> Incluir uma nova imagem</button>
-	<h5 class="text-center h5">Clique nas imagens para aumentar seu tamanho!</h5>
+	<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modalInclusao"><i class="fa fa-download" aria-hidden="true"></i> Incluir uma nova imagem</button>
 
 	<?php if (isset($mensagem['erro'])){ ?>
 		<div class="col-md-12 alert alert-danger text-center mt-3" role="alert">
@@ -45,5 +43,4 @@
 			</div>
 		</div>
 	</div>
-	<hr>
 </div>

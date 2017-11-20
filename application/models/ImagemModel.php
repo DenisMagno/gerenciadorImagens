@@ -73,5 +73,13 @@
 
 			return array('sucesso' => "Imagem salva com sucesso!");
 		}
+
+		public function obterUltimasImagens(){
+			$imagem = new ImagemLib();
+
+			$listaDeImagens = $imagem->obtemUltimasImagens();
+
+			return $listaDeImagens;
+		}
 	}
 ?>

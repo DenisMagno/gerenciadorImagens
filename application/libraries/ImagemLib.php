@@ -107,5 +107,16 @@
 				return false;
 			}
 		}
+
+		public function obtemUltimasImagens(){
+			$sql = "SELECT * FROM imagem ORDER BY id DESC LIMIT 3";
+			$query = $this->db->query($sql);
+
+			if($query->result() != null){
+				return $query->result_array();
+			}else{
+				return false;
+			}
+		}
 	}
 ?>

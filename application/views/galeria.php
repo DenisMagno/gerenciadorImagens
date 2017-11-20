@@ -1,4 +1,6 @@
 <div class="container-galeria col-md-11 mx-auto mt-5">
+	<hr>
+	<h5 class="text-center h5 mb-3">Clique nas imagens para aumentar seu tamanho!</h5>
 	<div class="row">
 		<?php if(!empty($imagens)){ foreach($imagens as $key => $value){ ?>
 			<figure class="col-md-4">
@@ -25,7 +27,7 @@
 					</div>
 				</div>
 
-				<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalEdicao<?= $key ?>"><i class="fa fa-edit" aria-hidden="true"></i> Editar</button>
+				<button type="button" class="btn btn-outline-elegant" data-toggle="modal" data-target="#modalEdicao<?= $key ?>"><i class="fa fa-edit" aria-hidden="true"></i> Editar</button>
 				<!-- ModalEdição -->
 				<div class="modal fade" id="modalEdicao<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="modalEdicao<?= $key ?>Label" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
