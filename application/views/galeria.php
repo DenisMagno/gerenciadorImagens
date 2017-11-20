@@ -25,7 +25,7 @@
 					</div>
 				</div>
 
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEdicao<?= $key ?>"><i class="fa fa-edit" aria-hidden="true"></i> Editar</button>
+				<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalEdicao<?= $key ?>"><i class="fa fa-edit" aria-hidden="true"></i> Editar</button>
 				<!-- ModalEdição -->
 				<div class="modal fade" id="modalEdicao<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="modalEdicao<?= $key ?>Label" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
@@ -50,14 +50,14 @@
 										<label for="inputDescricao">Descrição</label>
 									</div>
 
-									<button type="submit" class="btn btn-primary" name="incluir">Editar</button>
+									<button type="submit" class="btn btn-outline-primary" name="incluir">Editar</button>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#modalExclusao<?= $key ?>"><i class="fa fa-close" aria-hidden="true"></i> Excluir</button>
+				<button type="button" class="btn btn-outline-danger float-right" data-toggle="modal" data-target="#modalExclusao<?= $key ?>"><i class="fa fa-close" aria-hidden="true"></i> Excluir</button>
 				<!-- ModalExclusão -->
 				<div class="modal fade" id="modalExclusao<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="modalExclusao<?= $key ?>Label" aria-hidden="true">
 					<div class="modal-dialog modal-lg text-center" role="document">
@@ -74,12 +74,13 @@
 							<form name="exclusao" method="POST" action="<?= base_url("imagem/excluirImagem")?>">
 								<input type="hidden" name="id" value="<?= $imagens[$key]['id'] ?>">
 
-								<button type="submit" class="btn btn-success col-md-3" name="confirmar">Confirmar</button>
+								<button type="submit" class="btn btn-outline-success col-md-3" name="confirmar">Confirmar</button>
 							</form>
-							<button type="button" class="btn btn-danger col-md-3 mx-auto" name="cancelar" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-outline-danger col-md-3 mx-auto" name="cancelar" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>
 				</div>
+				<hr>
 
 			</figure>
 		<?php }} else { ?>
