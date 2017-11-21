@@ -22,6 +22,9 @@
 
 			$data['mensagem'] = $this->model->editarImagem();
 
+			$dados = array('imagens' => $this->model->obterUltimasImagens());
+			$this->load->view('carousel.php', $dados);
+
 			$this->load->view('inclusaoImagem.php', $data);
 
 			$dados = array('imagens' => $this->model->listarImagens());
@@ -36,6 +39,9 @@
 
 			$data['mensagem'] = $this->model->excluirImagem();
 
+			$dados = array('imagens' => $this->model->obterUltimasImagens());
+			$this->load->view('carousel.php', $dados);
+
 			$this->load->view('inclusaoImagem.php', $data);
 
 			$dados = array('imagens' => $this->model->listarImagens());
@@ -49,6 +55,9 @@
 			$this->load->model('ImagemModel', 'model');
 
 			$data['mensagem'] = $this->model->incluirImagem();
+
+			$dados = array('imagens' => $this->model->obterUltimasImagens());
+			$this->load->view('carousel.php', $dados);
 
 			$this->load->view('inclusaoImagem.php', $data);
 

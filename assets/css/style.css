@@ -8,3 +8,13 @@
 .descricao-galeria{
 	height: 30px;
 }
+
+.container-carousel{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-image: url("../img/imagens/carousel-bg.jpg");
+}
+
+.titulo{
+	color: #007897;
+}

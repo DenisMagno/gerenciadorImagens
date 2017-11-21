@@ -2,11 +2,11 @@
 	<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modalInclusao"><i class="fa fa-download" aria-hidden="true"></i> Incluir uma nova imagem</button>
 
 	<?php if (isset($mensagem['erro'])){ ?>
-		<div class="col-md-12 alert alert-danger text-center mt-3" role="alert">
+		<div id="msg" class="col-md-12 alert alert-danger text-center mt-3" role="alert">
 			<?= $mensagem['erro']?>
 		</div>
 	<?php } if (isset($mensagem['sucesso'])){ ?>
-		<div class="col-md-12 alert alert-success text-center mt-3" role="alert">
+		<div id="msg" class="col-md-12 alert alert-success text-center mt-3" role="alert">
 			<?= $mensagem['sucesso'] ?>
 		</div>
 	<?php }  ?>
