@@ -45,6 +45,12 @@
 			$this->endereco = $endereco;
 		}
 
+		/*
+		*	Obtem todas as imagems do banco de dados
+		*
+		*	@return array: imagens encontradas
+		*	@return boolean: false, caso não encontre nenhuma imagem.
+		*/
 		public function obtemImagens(){
 			$sql = "SELECT * FROM imagem ORDER BY id DESC";
 			$query = $this->db->query($sql);
@@ -56,6 +62,9 @@
 			}
 		}
 
+		/*
+		*	Edita uma imagem do banco de dados
+		*/
 		public function editaImagem(){
 			$this->db->set('titulo', $this->titulo);
 			$this->db->set('descricao', $this->descricao);
@@ -63,6 +72,12 @@
 			$this->db->update('imagem');
 		}
 
+		/*
+		*	Exclui uma imagem do baco de dados e exclui seu respectivo arquivo no servidor
+		*
+		*	@return array: imagens encontradas
+		*	@return boolean: false, caso não encontre nenhuma imagem.
+		*/
 		public function excluiImagem(){
 			$this->db->where('id', $this->id);
 			$this->db->delete('imagem');
@@ -71,6 +86,11 @@
 			unlink('./imagens_bd/'.$this->id.'.png');
 		}
 
+		/*
+		*	Inclui uma imagem no banco de dados
+		*
+		*	@return boolean: true, caso consiga incluir a imagem; false, caso não consiga incluir a imagem
+		*/
 		public function incluiImagem(){
 			//Define local para horário, pega horário atual e filtra string para ter apenas números.
 			date_default_timezone_set('America/Sao_Paulo');
@@ -108,6 +128,12 @@
 			}
 		}
 
+		/*
+		*	Obtem as últimas 3 imagens cadastradas no banco
+		*
+		*	@return array: imagens encontradas
+		*	@return boolean: false, caso não encontre nenhuma imagem.
+		*/
 		public function obtemUltimasImagens(){
 			$sql = "SELECT * FROM imagem ORDER BY id DESC LIMIT 3";
 			$query = $this->db->query($sql);
