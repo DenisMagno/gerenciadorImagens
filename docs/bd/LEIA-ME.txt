@@ -1,0 +1,24 @@
+*****************************************************************
+* Autor: Denis Rolander Isaac Magno		   Prontuário: 166232-5 *
+* Turma: A 	Curso: Análise e Desenvolvimento de Sistemas 		*
+* Módulo: III													*
+* Data: 20/11/2017												*
+*****************************************************************
+
+-----Estrutura do sistema-----
+Foi tomada a decisão de implementar a classe básica das entidades no diretório 'libraries' para
+estruturação das informações recebidas do banco de dados.
+A classe criada segue o seguinte padrão: <NomedaEntidade><Library>. Pois a mesma
+não poderia ter um nome já existente no projeto.
+
+-----Banco de dados-----
+Existem três arquivos diferentes para confecção do banco e testes no sistema
+schema = Contem apenas a estrutura do banco, não populado.
+insertions = Contem apenas os códigos de inserção de informações e população do banco de dados já criado.
+bd = Contem a estrutura do banco já populado com as informações.
+
+Dados para acesso:
+'database' => 'gerenciadorimagens'
+
+-----Links-----
+GitHub: https://github.com/DenisMagno/gerenciadorImagens/
