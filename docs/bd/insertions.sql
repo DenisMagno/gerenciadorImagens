@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `gerenciadorimagens` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `gerenciadorimagens`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: gerenciadorimagens
@@ -16,22 +14,6 @@ USE `gerenciadorimagens`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `imagem`
---
-
-DROP TABLE IF EXISTS `imagem`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `imagem` (
-  `id` bigint(20) NOT NULL,
-  `titulo` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `descricao` varchar(60) CHARACTER SET utf8 NOT NULL,
-  `endereco` varchar(250) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `imagem`
@@ -52,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-20 22:48:58
+-- Dump completed on 2017-11-20 22:48:42
